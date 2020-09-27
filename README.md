@@ -2,7 +2,7 @@
 
 > Simple todo application
 
-[Живое демо](https://react-hooks-735b2.web.app/)
+[Watch Live Demo](https://react-hooks-735b2.web.app/)
 
 ## Технологический стек
 
