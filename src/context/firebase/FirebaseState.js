@@ -20,10 +20,12 @@ export const FirebaseState = ({ children }) => {
 
     const { data: notes } = await Axios.get(`${url}/notes.json`);
 
-    const payload = Object.keys(notes).map((noteId) => ({
-      ...notes[noteId],
-      id: noteId,
-    }));
+    const payload = !notes
+      ? []
+      : Object.keys(notes).map((noteId) => ({
+          ...notes[noteId],
+          id: noteId,
+        }));
 
     dispatch({ type: FETCH_NOTES, payload });
   };
